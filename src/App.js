@@ -3,6 +3,8 @@ import './App.css';
 
 // components
 import Login from './components/Login';
+import Home from './components/Home';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -10,6 +12,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
+          <Route path="/home">
+            <Header />
+            <Home />
+          </Route>
         </Switch>
       </Router>
     </div>
